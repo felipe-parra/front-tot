@@ -1,31 +1,31 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Menu, Icon } from "antd";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Nav extends React.Component {
-  render() {
-    return (
-      <Menu mode="horizontal">
-        <Menu.Item key="home">
-          <Link to="/">
-            <Icon type="home" />
-            Home
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="dashboard">
-          <Link to="/dashboard">
-            <Icon type="unordered-list" />
-            Dashboard
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="register">
-          <Link to="/register">
-            <Icon type="user-add" /> Register
-          </Link>
-        </Menu.Item>
-      </Menu>
-    );
-  }
+	render() {
+		return (
+			<nav>
+				<div className="nav-wrapper">
+					<Link to="/" className="brand-logo">
+						<i className="material-icons">home</i>
+					</Link>
+					<ul id="nav-mobile" className="right hide-on-med-and-down">
+						<li>
+							<Link to="/dashboard">
+								<i className="material-icons">list</i>
+								Dashboard
+							</Link>
+						</li>
+						<li>
+							<Link to="/register">
+								<i className="material-icons">person</i>Register
+							</Link>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		);
+	}
 }
 
 export default Nav;
